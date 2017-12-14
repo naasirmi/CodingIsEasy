@@ -1,0 +1,134 @@
+public class SpaceNeedle {
+
+	public static final int SIZE=4;
+	public static void main(String[] args) {
+		drawCenter();
+		hat();
+		drawLine();
+		drawBase();
+		drawCenter();
+		drawMiddle();
+		hat();
+		drawLine();
+	}
+
+	public static void hat(){
+		for(int space=1; space<=0; space++){
+			System.out.println(" ");
+		}
+
+		for(int line=1; line<=SIZE; line++){
+			for(int space=1; space<=3*SIZE-3*line; space++){
+				System.out.print(" ");
+			}
+			System.out.print("__/");
+
+			for(int dot=1; dot<=3*line-3; dot++){
+				System.out.print(":");
+			}
+			System.out.print("||");
+
+			for(int dot=1; dot<=3*line-3; dot++){
+
+System.out.print(":");
+			}
+			System.out.println("\\__");
+		}
+	}
+
+	public static void drawLine(){
+		System.out.print("|");
+		for(int line=1; line<=6*SIZE; line++){
+			System.out.print("\"");
+		}
+		System.out.println("|");
+	}
+
+	public static void drawBase(){
+		for(int line=1; line<=SIZE; line++){
+
+			for(int space=1; space<=2*line-2; space++){
+				System.out.print(" ");
+			}
+			System.out.print("\\_");
+			for(int slash=1; slash<=(3*SIZE+1)-2*line; slash++){
+				System.out.print("/\\");
+			}
+			System.out.println("_/");}}
+
+	public static void drawCenter(){
+		for(int line=1; line<=SIZE; line++){
+
+			for(int space=1; space<=3*SIZE; space++){
+				System.out.print(" ");
+			}
+			for(int bar=1; bar<=2; bar++){
+				System.out.print("|");
+			}
+			System.out.println();
+		}
+	}
+	public static void drawMiddle() {
+		for (int line=1; line<=4*SIZE; line++){
+
+			for(int space=1; space<=3*SIZE-3; space++){
+				System.out.print(" ");
+			}
+			System.out.print("|");
+
+
+			for(int percent=1; percent<=2; percent++){
+				System.out.print("%");
+
+			}
+			System.out.print("||");
+
+			for(int percent=1; percent<=2; percent++){
+				System.out.print("%");
+			}
+			System.out.println("|");
+		}
+	}
+
+}
+Output:
+
+            ||
+            ||
+            ||
+            ||
+         __/||\__
+      __/:::||:::\__
+   __/::::::||::::::\__
+__/:::::::::||:::::::::\__
+|""""""""""""""""""""""""|
+\_/\/\/\/\/\/\/\/\/\/\/\_/
+  \_/\/\/\/\/\/\/\/\/\_/
+    \_/\/\/\/\/\/\/\_/
+      \_/\/\/\/\/\_/
+            ||
+            ||
+            ||
+            ||
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         |%%||%%|
+         __/||\__
+      __/:::||:::\__
+   __/::::::||::::::\__
+__/:::::::::||:::::::::\__
+|""""""""""""""""""""""""|
+
